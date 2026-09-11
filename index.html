@@ -199,6 +199,42 @@
     </div>
   </div>
 
+  <!-- ============ MODAL C: log quantity (tap/drag a food) ============ -->
+  <div class="sheet-overlay" id="quantity-modal-overlay" hidden>
+    <div class="sheet" id="quantity-modal-sheet">
+      <div class="sheet-head">
+        <div class="sheet-head-with-emoji">
+          <span class="sheet-emoji" id="quantity-modal-emoji">🍎</span>
+          <div>
+            <h2 class="sheet-title" id="quantity-modal-name">Food</h2>
+            <p class="sheet-sub" id="quantity-modal-hint">Adding to breakfast</p>
+          </div>
+        </div>
+        <button type="button" class="close-btn" id="quantity-modal-close">✕</button>
+      </div>
+      <div class="sheet-body">
+        <div class="ingredient-row">
+          <span class="info">
+            <span class="name">How much?</span><br/>
+            <span class="qty" id="quantity-modal-grams">100 g</span>
+          </span>
+          <span class="steppers">
+            <button type="button" class="mini-stepper-btn" id="quantity-modal-minus">−</button>
+            <button type="button" class="mini-stepper-btn" id="quantity-modal-plus">+</button>
+          </span>
+        </div>
+      </div>
+      <div class="sheet-footer">
+        <div class="sheet-footer-total">
+          <span class="total-label">TOTAL</span>
+          <span class="total-value" id="quantity-modal-total">0 kcal</span>
+          <span class="total-protein" id="quantity-modal-protein-total">0g protein</span>
+        </div>
+        <button type="button" class="primary-btn" id="quantity-modal-confirm">Add it</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ============ MODAL A: meal idea portion editor ============ -->
   <div class="sheet-overlay" id="meal-modal-overlay" hidden>
     <div class="sheet" id="meal-modal-sheet">

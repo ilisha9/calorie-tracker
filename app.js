@@ -47,6 +47,9 @@
     openMealId: null,
     mealModalGrams: {},
     customDraft: { emoji: EMOJI_CHOICES[0], name: "", calories: 100, protein: 0, serving: SERVING_CHOICES[0] },
+    quantityFood: null,
+    quantityGrams: 0,
+    quantityMeal: null,
   };
 
   // ---------- storage helpers ----------
@@ -152,6 +155,7 @@
     bindEntriesPopup();
     bindMealModal();
     bindCustomFoodModal();
+    bindQuantityModal();
 
     document.addEventListener("visibilitychange", () => {
       if (document.visibilityState === "visible") {
@@ -421,18 +425,7 @@
 
   // ---------- logging ----------
 
-  function logFood(food, meal) {
-    const entry = {
-      id: uid("entry"),
-      foodId: food.id,
-      name: food.name,
-      emoji: food.emoji,
-      calories: food.calories,
-      protein: food.protein || 0,
-      servingLabel: food.servingLabel,
-      time: new Date().toTimeString().slice(0, 5),
-      meal,
-    };
+  function pushEntry(entry) {
     const log = getTodayLog();
     log.push(entry);
     saveLog(state.todayKey, log);
@@ -500,10 +493,10 @@
         if (dragCtx.moved) {
           endGhost();
           if (isOverRing(ev.clientX, ev.clientY)) {
-            logFood(food, state.activeMeal);
+            openQuantityModal(food, state.activeMeal);
           }
         } else {
-          logFood(food, state.activeMeal);
+          openQuantityModal(food, state.activeMeal);
         }
 
         dragCtx.active = false;
@@ -550,6 +543,80 @@
     const ring = document.getElementById("ring-center");
     ring.classList.toggle("drag-over", active);
     document.getElementById("ring-hint").textContent = active ? "Let go to add it" : "Tap a food, or drag it here";
+  }
+
+  // ---------- quantity modal (tap/drag a food) ----------
+
+  function bindQuantityModal() {
+    document.getElementById("quantity-modal-close").addEventListener("click", closeQuantityModal);
+    document.getElementById("quantity-modal-overlay").addEventListener("click", (e) => {
+      if (e.target.id === "quantity-modal-overlay") closeQuantityModal();
+    });
+    document.getElementById("quantity-modal-minus").addEventListener("click", () => {
+      if (!state.quantityFood) return;
+      const step = ingredientStep(state.quantityFood.defaultGrams || 100);
+      state.quantityGrams = Math.max(0, state.quantityGrams - step);
+      renderQuantityModal();
+    });
+    document.getElementById("quantity-modal-plus").addEventListener("click", () => {
+      if (!state.quantityFood) return;
+      const step = ingredientStep(state.quantityFood.defaultGrams || 100);
+      state.quantityGrams += step;
+      renderQuantityModal();
+    });
+    document.getElementById("quantity-modal-confirm").addEventListener("click", confirmLogQuantity);
+  }
+
+  function openQuantityModal(food, meal) {
+    state.quantityFood = food;
+    state.quantityMeal = meal;
+    state.quantityGrams = food.defaultGrams || 100;
+    renderQuantityModal();
+    document.getElementById("quantity-modal-overlay").hidden = false;
+  }
+
+  function closeQuantityModal() {
+    document.getElementById("quantity-modal-overlay").hidden = true;
+    state.quantityFood = null;
+  }
+
+  function renderQuantityModal() {
+    const food = state.quantityFood;
+    if (!food) return;
+    const defaultGrams = food.defaultGrams || 100;
+    const grams = state.quantityGrams;
+    const calories = Math.round((food.calories * grams) / defaultGrams);
+    const protein = Math.round(((food.protein || 0) * grams) / defaultGrams);
+
+    document.getElementById("quantity-modal-emoji").textContent = food.emoji;
+    document.getElementById("quantity-modal-name").textContent = food.name;
+    document.getElementById("quantity-modal-hint").textContent = `Adding to ${MEAL_LABELS[state.quantityMeal].name.toLowerCase()}`;
+    document.getElementById("quantity-modal-grams").textContent = `${grams} g`;
+    document.getElementById("quantity-modal-total").textContent = `${calories} kcal`;
+    document.getElementById("quantity-modal-protein-total").textContent = `${protein}g protein`;
+    document.getElementById("quantity-modal-confirm").disabled = grams <= 0;
+  }
+
+  function confirmLogQuantity() {
+    const food = state.quantityFood;
+    if (!food || state.quantityGrams <= 0) return;
+    const defaultGrams = food.defaultGrams || 100;
+    const grams = state.quantityGrams;
+    const calories = Math.round((food.calories * grams) / defaultGrams);
+    const protein = Math.round(((food.protein || 0) * grams) / defaultGrams);
+
+    pushEntry({
+      id: uid("entry"),
+      foodId: food.id,
+      name: food.name,
+      emoji: food.emoji,
+      calories,
+      protein,
+      servingLabel: `${grams} g`,
+      time: new Date().toTimeString().slice(0, 5),
+      meal: state.quantityMeal,
+    });
+    closeQuantityModal();
   }
 
   // ---------- entries popup ----------

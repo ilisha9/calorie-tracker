@@ -6,7 +6,8 @@
     "category": "breakfast",
     "calories": 150,
     "protein": 5,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 240
   },
   {
     "id": "b2",
@@ -15,7 +16,8 @@
     "category": "breakfast",
     "calories": 78,
     "protein": 6,
-    "servingLabel": "1 egg"
+    "servingLabel": "1 egg",
+    "defaultGrams": 50
   },
   {
     "id": "b3",
@@ -24,7 +26,8 @@
     "category": "breakfast",
     "calories": 90,
     "protein": 6,
-    "servingLabel": "1 egg"
+    "servingLabel": "1 egg",
+    "defaultGrams": 50
   },
   {
     "id": "b4",
@@ -33,7 +36,8 @@
     "category": "breakfast",
     "calories": 120,
     "protein": 3,
-    "servingLabel": "1 slice"
+    "servingLabel": "1 slice",
+    "defaultGrams": 30
   },
   {
     "id": "b5",
@@ -42,7 +46,8 @@
     "category": "breakfast",
     "calories": 140,
     "protein": 3,
-    "servingLabel": "1 slice"
+    "servingLabel": "1 slice",
+    "defaultGrams": 35
   },
   {
     "id": "b6",
@@ -51,7 +56,8 @@
     "category": "breakfast",
     "calories": 220,
     "protein": 6,
-    "servingLabel": "2 pancakes"
+    "servingLabel": "2 pancakes",
+    "defaultGrams": 130
   },
   {
     "id": "b7",
@@ -60,7 +66,8 @@
     "category": "breakfast",
     "calories": 250,
     "protein": 5,
-    "servingLabel": "1 piece"
+    "servingLabel": "1 piece",
+    "defaultGrams": 120
   },
   {
     "id": "b8",
@@ -69,7 +76,8 @@
     "category": "breakfast",
     "calories": 120,
     "protein": 3,
-    "servingLabel": "1 piece"
+    "servingLabel": "1 piece",
+    "defaultGrams": 60
   },
   {
     "id": "b9",
@@ -78,7 +86,8 @@
     "category": "breakfast",
     "calories": 180,
     "protein": 6,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 250
   },
   {
     "id": "b10",
@@ -87,7 +96,8 @@
     "category": "breakfast",
     "calories": 200,
     "protein": 5,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 60
   },
   {
     "id": "b11",
@@ -96,7 +106,8 @@
     "category": "breakfast",
     "calories": 230,
     "protein": 5,
-    "servingLabel": "1 piece"
+    "servingLabel": "1 piece",
+    "defaultGrams": 60
   },
   {
     "id": "b12",
@@ -105,7 +116,8 @@
     "category": "breakfast",
     "calories": 100,
     "protein": 10,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 170
   },
   {
     "id": "b13",
@@ -114,7 +126,8 @@
     "category": "breakfast",
     "calories": 60,
     "protein": 0,
-    "servingLabel": "1 tbsp"
+    "servingLabel": "1 tbsp",
+    "defaultGrams": 21
   },
   {
     "id": "b14",
@@ -123,7 +136,8 @@
     "category": "breakfast",
     "calories": 250,
     "protein": 6,
-    "servingLabel": "1 slice"
+    "servingLabel": "1 slice",
+    "defaultGrams": 120
   },
   {
     "id": "b15",
@@ -132,7 +146,8 @@
     "category": "breakfast",
     "calories": 180,
     "protein": 13,
-    "servingLabel": "2 eggs"
+    "servingLabel": "2 eggs",
+    "defaultGrams": 110
   },
   {
     "id": "b16",
@@ -141,7 +156,8 @@
     "category": "breakfast",
     "calories": 180,
     "protein": 4,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 250
   },
   {
     "id": "b17",
@@ -150,7 +166,8 @@
     "category": "breakfast",
     "calories": 110,
     "protein": 1,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 250
   },
   {
     "id": "b18",
@@ -159,7 +176,8 @@
     "category": "breakfast",
     "calories": 120,
     "protein": 8,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 240
   },
   {
     "id": "b19",
@@ -168,7 +186,8 @@
     "category": "breakfast",
     "calories": 200,
     "protein": 5,
-    "servingLabel": "1 piece"
+    "servingLabel": "1 piece",
+    "defaultGrams": 100
   },
   {
     "id": "b20",
@@ -177,7 +196,8 @@
     "category": "breakfast",
     "calories": 160,
     "protein": 6,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 100
   },
   {
     "id": "b21",
@@ -186,7 +206,8 @@
     "category": "breakfast",
     "calories": 210,
     "protein": 4,
-    "servingLabel": "1 piece"
+    "servingLabel": "1 piece",
+    "defaultGrams": 90
   },
   {
     "id": "b22",
@@ -195,7 +216,8 @@
     "category": "breakfast",
     "calories": 260,
     "protein": 6,
-    "servingLabel": "1 slice + dip"
+    "servingLabel": "1 slice + dip",
+    "defaultGrams": 100
   },
   {
     "id": "fr1",
@@ -204,7 +226,8 @@
     "category": "fruit",
     "calories": 95,
     "protein": 0,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 180
   },
   {
     "id": "fr2",
@@ -213,7 +236,8 @@
     "category": "fruit",
     "calories": 105,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 120
   },
   {
     "id": "fr3",
@@ -222,7 +246,8 @@
     "category": "fruit",
     "calories": 62,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 130
   },
   {
     "id": "fr4",
@@ -231,7 +256,8 @@
     "category": "fruit",
     "calories": 100,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 150
   },
   {
     "id": "fr5",
@@ -240,7 +266,8 @@
     "category": "fruit",
     "calories": 85,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 155
   },
   {
     "id": "fr6",
@@ -249,7 +276,8 @@
     "category": "fruit",
     "calories": 50,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 150
   },
   {
     "id": "fr7",
@@ -258,7 +286,8 @@
     "category": "fruit",
     "calories": 100,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 180
   },
   {
     "id": "fr8",
@@ -267,7 +296,8 @@
     "category": "fruit",
     "calories": 60,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 150
   },
   {
     "id": "fr9",
@@ -276,7 +306,8 @@
     "category": "fruit",
     "calories": 200,
     "protein": 2,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 225
   },
   {
     "id": "fr10",
@@ -285,7 +316,8 @@
     "category": "fruit",
     "calories": 80,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 165
   },
   {
     "id": "fr11",
@@ -294,7 +326,8 @@
     "category": "fruit",
     "calories": 45,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 70
   },
   {
     "id": "fr12",
@@ -303,7 +336,8 @@
     "category": "fruit",
     "calories": 110,
     "protein": 1,
-    "servingLabel": "5 pieces"
+    "servingLabel": "5 pieces",
+    "defaultGrams": 40
   },
   {
     "id": "fr13",
@@ -312,7 +346,8 @@
     "category": "fruit",
     "calories": 80,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 160
   },
   {
     "id": "fr14",
@@ -321,7 +356,8 @@
     "category": "fruit",
     "calories": 90,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 140
   },
   {
     "id": "fr15",
@@ -330,7 +366,8 @@
     "category": "fruit",
     "calories": 85,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 150
   },
   {
     "id": "fr16",
@@ -339,7 +376,8 @@
     "category": "fruit",
     "calories": 17,
     "protein": 0,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 60
   },
   {
     "id": "fr17",
@@ -348,7 +386,8 @@
     "category": "fruit",
     "calories": 90,
     "protein": 0,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 180
   },
   {
     "id": "fr18",
@@ -357,7 +396,8 @@
     "category": "fruit",
     "calories": 160,
     "protein": 2,
-    "servingLabel": "1/4 cup"
+    "servingLabel": "1/4 cup",
+    "defaultGrams": 30
   },
   {
     "id": "fr19",
@@ -366,7 +406,8 @@
     "category": "fruit",
     "calories": 55,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 160
   },
   {
     "id": "fr20",
@@ -375,7 +416,8 @@
     "category": "fruit",
     "calories": 130,
     "protein": 1,
-    "servingLabel": "1/4 cup"
+    "servingLabel": "1/4 cup",
+    "defaultGrams": 40
   },
   {
     "id": "v1",
@@ -384,7 +426,8 @@
     "category": "vegetables",
     "calories": 55,
     "protein": 4,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 90
   },
   {
     "id": "v2",
@@ -393,7 +436,8 @@
     "category": "vegetables",
     "calories": 25,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 60
   },
   {
     "id": "v3",
@@ -402,7 +446,8 @@
     "category": "vegetables",
     "calories": 20,
     "protein": 2,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 30
   },
   {
     "id": "v4",
@@ -411,7 +456,8 @@
     "category": "vegetables",
     "calories": 22,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 120
   },
   {
     "id": "v5",
@@ -420,7 +466,8 @@
     "category": "vegetables",
     "calories": 16,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 150
   },
   {
     "id": "v6",
@@ -429,7 +476,8 @@
     "category": "vegetables",
     "calories": 30,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 120
   },
   {
     "id": "v7",
@@ -438,7 +486,8 @@
     "category": "vegetables",
     "calories": 33,
     "protein": 2,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 120
   },
   {
     "id": "v8",
@@ -447,7 +496,8 @@
     "category": "vegetables",
     "calories": 35,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 80
   },
   {
     "id": "v9",
@@ -456,7 +506,8 @@
     "category": "vegetables",
     "calories": 27,
     "protein": 2,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 100
   },
   {
     "id": "v10",
@@ -465,7 +516,8 @@
     "category": "vegetables",
     "calories": 31,
     "protein": 2,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 100
   },
   {
     "id": "v11",
@@ -474,7 +526,8 @@
     "category": "vegetables",
     "calories": 62,
     "protein": 4,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 145
   },
   {
     "id": "v12",
@@ -483,7 +536,8 @@
     "category": "vegetables",
     "calories": 112,
     "protein": 2,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 130
   },
   {
     "id": "v13",
@@ -492,7 +546,8 @@
     "category": "vegetables",
     "calories": 130,
     "protein": 3,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 170
   },
   {
     "id": "v14",
@@ -501,7 +556,8 @@
     "category": "vegetables",
     "calories": 44,
     "protein": 1,
-    "servingLabel": "1 medium"
+    "servingLabel": "1 medium",
+    "defaultGrams": 110
   },
   {
     "id": "v15",
@@ -510,7 +566,8 @@
     "category": "vegetables",
     "calories": 4,
     "protein": 0,
-    "servingLabel": "1 clove"
+    "servingLabel": "1 clove",
+    "defaultGrams": 3
   },
   {
     "id": "v16",
@@ -519,7 +576,8 @@
     "category": "vegetables",
     "calories": 8,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 55
   },
   {
     "id": "v17",
@@ -528,7 +586,8 @@
     "category": "vegetables",
     "calories": 15,
     "protein": 2,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 70
   },
   {
     "id": "v18",
@@ -537,7 +596,8 @@
     "category": "vegetables",
     "calories": 90,
     "protein": 3,
-    "servingLabel": "1 ear"
+    "servingLabel": "1 ear",
+    "defaultGrams": 90
   },
   {
     "id": "v19",
@@ -546,7 +606,8 @@
     "category": "vegetables",
     "calories": 22,
     "protein": 1,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 90
   },
   {
     "id": "v20",
@@ -555,7 +616,8 @@
     "category": "vegetables",
     "calories": 44,
     "protein": 2,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 135
   },
   {
     "id": "p1",
@@ -564,7 +626,8 @@
     "category": "protein",
     "calories": 165,
     "protein": 31,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p2",
@@ -573,7 +636,8 @@
     "category": "protein",
     "calories": 209,
     "protein": 26,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p3",
@@ -582,7 +646,8 @@
     "category": "protein",
     "calories": 250,
     "protein": 26,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p4",
@@ -591,7 +656,8 @@
     "category": "protein",
     "calories": 215,
     "protein": 21,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p5",
@@ -600,7 +666,8 @@
     "category": "protein",
     "calories": 280,
     "protein": 25,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p6",
@@ -609,7 +676,8 @@
     "category": "protein",
     "calories": 120,
     "protein": 22,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p7",
@@ -618,7 +686,8 @@
     "category": "protein",
     "calories": 208,
     "protein": 20,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p8",
@@ -627,7 +696,8 @@
     "category": "protein",
     "calories": 116,
     "protein": 26,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p9",
@@ -636,7 +706,8 @@
     "category": "protein",
     "calories": 99,
     "protein": 24,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p10",
@@ -645,7 +716,8 @@
     "category": "protein",
     "calories": 164,
     "protein": 9,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 165
   },
   {
     "id": "p11",
@@ -654,7 +726,8 @@
     "category": "protein",
     "calories": 180,
     "protein": 13,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 200
   },
   {
     "id": "p12",
@@ -663,7 +736,8 @@
     "category": "protein",
     "calories": 132,
     "protein": 9,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 170
   },
   {
     "id": "p13",
@@ -672,7 +746,8 @@
     "category": "protein",
     "calories": 127,
     "protein": 9,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 170
   },
   {
     "id": "p14",
@@ -681,7 +756,8 @@
     "category": "protein",
     "calories": 94,
     "protein": 10,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p15",
@@ -690,7 +766,8 @@
     "category": "protein",
     "calories": 230,
     "protein": 20,
-    "servingLabel": "3 pieces"
+    "servingLabel": "3 pieces",
+    "defaultGrams": 150
   },
   {
     "id": "p16",
@@ -699,7 +776,8 @@
     "category": "protein",
     "calories": 210,
     "protein": 18,
-    "servingLabel": "4 pieces"
+    "servingLabel": "4 pieces",
+    "defaultGrams": 160
   },
   {
     "id": "p17",
@@ -708,7 +786,8 @@
     "category": "protein",
     "calories": 128,
     "protein": 26,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p18",
@@ -717,7 +796,8 @@
     "category": "protein",
     "calories": 208,
     "protein": 25,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p19",
@@ -726,7 +806,8 @@
     "category": "protein",
     "calories": 105,
     "protein": 23,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p20",
@@ -735,7 +816,8 @@
     "category": "protein",
     "calories": 135,
     "protein": 30,
-    "servingLabel": "100g"
+    "servingLabel": "100g",
+    "defaultGrams": 100
   },
   {
     "id": "p21",
@@ -744,7 +826,8 @@
     "category": "protein",
     "calories": 190,
     "protein": 21,
-    "servingLabel": "1 patty"
+    "servingLabel": "1 patty",
+    "defaultGrams": 120
   },
   {
     "id": "p22",
@@ -753,7 +836,8 @@
     "category": "protein",
     "calories": 34,
     "protein": 7,
-    "servingLabel": "3 whites"
+    "servingLabel": "3 whites",
+    "defaultGrams": 100
   },
   {
     "id": "d1",
@@ -762,7 +846,8 @@
     "category": "dairy",
     "calories": 120,
     "protein": 8,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 240
   },
   {
     "id": "d2",
@@ -771,7 +856,8 @@
     "category": "dairy",
     "calories": 80,
     "protein": 5,
-    "servingLabel": "1 slice"
+    "servingLabel": "1 slice",
+    "defaultGrams": 20
   },
   {
     "id": "d3",
@@ -780,7 +866,8 @@
     "category": "dairy",
     "calories": 110,
     "protein": 13,
-    "servingLabel": "1/2 cup"
+    "servingLabel": "1/2 cup",
+    "defaultGrams": 110
   },
   {
     "id": "d4",
@@ -789,7 +876,8 @@
     "category": "dairy",
     "calories": 100,
     "protein": 6,
-    "servingLabel": "50g"
+    "servingLabel": "50g",
+    "defaultGrams": 50
   },
   {
     "id": "d5",
@@ -798,7 +886,8 @@
     "category": "dairy",
     "calories": 90,
     "protein": 4,
-    "servingLabel": "2 tbsp"
+    "servingLabel": "2 tbsp",
+    "defaultGrams": 30
   },
   {
     "id": "d6",
@@ -807,7 +896,8 @@
     "category": "dairy",
     "calories": 100,
     "protein": 2,
-    "servingLabel": "2 tbsp"
+    "servingLabel": "2 tbsp",
+    "defaultGrams": 30
   },
   {
     "id": "d7",
@@ -816,7 +906,8 @@
     "category": "dairy",
     "calories": 85,
     "protein": 6,
-    "servingLabel": "30g"
+    "servingLabel": "30g",
+    "defaultGrams": 30
   },
   {
     "id": "d8",
@@ -825,7 +916,8 @@
     "category": "dairy",
     "calories": 100,
     "protein": 0,
-    "servingLabel": "1 tbsp"
+    "servingLabel": "1 tbsp",
+    "defaultGrams": 14
   },
   {
     "id": "d9",
@@ -834,7 +926,8 @@
     "category": "dairy",
     "calories": 150,
     "protein": 8,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 245
   },
   {
     "id": "d10",
@@ -843,7 +936,8 @@
     "category": "dairy",
     "calories": 50,
     "protein": 2,
-    "servingLabel": "1 wedge"
+    "servingLabel": "1 wedge",
+    "defaultGrams": 20
   },
   {
     "id": "d11",
@@ -852,7 +946,8 @@
     "category": "dairy",
     "calories": 110,
     "protein": 10,
-    "servingLabel": "30g"
+    "servingLabel": "30g",
+    "defaultGrams": 30
   },
   {
     "id": "d12",
@@ -861,7 +956,8 @@
     "category": "dairy",
     "calories": 100,
     "protein": 7,
-    "servingLabel": "1/4 cup"
+    "servingLabel": "1/4 cup",
+    "defaultGrams": 60
   },
   {
     "id": "d13",
@@ -870,7 +966,8 @@
     "category": "dairy",
     "calories": 100,
     "protein": 8,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 240
   },
   {
     "id": "m1",
@@ -879,7 +976,8 @@
     "category": "meals",
     "calories": 480,
     "protein": 35,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 350
   },
   {
     "id": "m2",
@@ -888,7 +986,8 @@
     "category": "meals",
     "calories": 520,
     "protein": 30,
-    "servingLabel": "1 wrap"
+    "servingLabel": "1 wrap",
+    "defaultGrams": 280
   },
   {
     "id": "m3",
@@ -897,7 +996,8 @@
     "category": "meals",
     "calories": 550,
     "protein": 28,
-    "servingLabel": "1 burger"
+    "servingLabel": "1 burger",
+    "defaultGrams": 250
   },
   {
     "id": "m4",
@@ -906,7 +1006,8 @@
     "category": "meals",
     "calories": 140,
     "protein": 4,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 300
   },
   {
     "id": "m5",
@@ -915,7 +1016,8 @@
     "category": "meals",
     "calories": 180,
     "protein": 12,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 300
   },
   {
     "id": "m6",
@@ -924,7 +1026,8 @@
     "category": "meals",
     "calories": 350,
     "protein": 14,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 300
   },
   {
     "id": "m7",
@@ -933,7 +1036,8 @@
     "category": "meals",
     "calories": 380,
     "protein": 30,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 300
   },
   {
     "id": "m8",
@@ -942,7 +1046,8 @@
     "category": "meals",
     "calories": 430,
     "protein": 14,
-    "servingLabel": "1 wrap"
+    "servingLabel": "1 wrap",
+    "defaultGrams": 250
   },
   {
     "id": "m9",
@@ -951,7 +1056,8 @@
     "category": "meals",
     "calories": 300,
     "protein": 10,
-    "servingLabel": "1 serving"
+    "servingLabel": "1 serving",
+    "defaultGrams": 200
   },
   {
     "id": "m10",
@@ -960,7 +1066,8 @@
     "category": "meals",
     "calories": 520,
     "protein": 28,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 350
   },
   {
     "id": "m11",
@@ -969,7 +1076,8 @@
     "category": "meals",
     "calories": 420,
     "protein": 28,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 350
   },
   {
     "id": "m12",
@@ -978,7 +1086,8 @@
     "category": "meals",
     "calories": 400,
     "protein": 32,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 320
   },
   {
     "id": "m13",
@@ -987,7 +1096,8 @@
     "category": "meals",
     "calories": 220,
     "protein": 6,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 300
   },
   {
     "id": "m14",
@@ -996,7 +1106,8 @@
     "category": "meals",
     "calories": 320,
     "protein": 16,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 300
   },
   {
     "id": "m15",
@@ -1005,7 +1116,8 @@
     "category": "meals",
     "calories": 350,
     "protein": 32,
-    "servingLabel": "2 skewers"
+    "servingLabel": "2 skewers",
+    "defaultGrams": 200
   },
   {
     "id": "m16",
@@ -1014,7 +1126,8 @@
     "category": "meals",
     "calories": 400,
     "protein": 30,
-    "servingLabel": "2 skewers"
+    "servingLabel": "2 skewers",
+    "defaultGrams": 200
   },
   {
     "id": "m17",
@@ -1023,7 +1136,8 @@
     "category": "meals",
     "calories": 300,
     "protein": 28,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 250
   },
   {
     "id": "m18",
@@ -1032,7 +1146,8 @@
     "category": "meals",
     "calories": 340,
     "protein": 12,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 300
   },
   {
     "id": "m19",
@@ -1041,7 +1156,8 @@
     "category": "meals",
     "calories": 250,
     "protein": 18,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 300
   },
   {
     "id": "m20",
@@ -1050,7 +1166,8 @@
     "category": "meals",
     "calories": 200,
     "protein": 12,
-    "servingLabel": "1 bowl"
+    "servingLabel": "1 bowl",
+    "defaultGrams": 300
   },
   {
     "id": "m21",
@@ -1059,7 +1176,8 @@
     "category": "meals",
     "calories": 380,
     "protein": 10,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 320
   },
   {
     "id": "m22",
@@ -1068,7 +1186,8 @@
     "category": "meals",
     "calories": 360,
     "protein": 32,
-    "servingLabel": "1 plate"
+    "servingLabel": "1 plate",
+    "defaultGrams": 300
   },
   {
     "id": "s1",
@@ -1077,7 +1196,8 @@
     "category": "snacks",
     "calories": 160,
     "protein": 6,
-    "servingLabel": "1 small handful"
+    "servingLabel": "1 small handful",
+    "defaultGrams": 28
   },
   {
     "id": "s2",
@@ -1086,7 +1206,8 @@
     "category": "snacks",
     "calories": 185,
     "protein": 4,
-    "servingLabel": "1 small handful"
+    "servingLabel": "1 small handful",
+    "defaultGrams": 28
   },
   {
     "id": "s3",
@@ -1095,7 +1216,8 @@
     "category": "snacks",
     "calories": 155,
     "protein": 5,
-    "servingLabel": "1 small handful"
+    "servingLabel": "1 small handful",
+    "defaultGrams": 28
   },
   {
     "id": "s4",
@@ -1104,7 +1226,8 @@
     "category": "snacks",
     "calories": 100,
     "protein": 3,
-    "servingLabel": "2 cups"
+    "servingLabel": "2 cups",
+    "defaultGrams": 16
   },
   {
     "id": "s5",
@@ -1113,7 +1236,8 @@
     "category": "snacks",
     "calories": 70,
     "protein": 1,
-    "servingLabel": "2 cakes"
+    "servingLabel": "2 cakes",
+    "defaultGrams": 18
   },
   {
     "id": "s6",
@@ -1122,7 +1246,8 @@
     "category": "snacks",
     "calories": 140,
     "protein": 3,
-    "servingLabel": "1 bar"
+    "servingLabel": "1 bar",
+    "defaultGrams": 35
   },
   {
     "id": "s7",
@@ -1131,7 +1256,8 @@
     "category": "snacks",
     "calories": 120,
     "protein": 2,
-    "servingLabel": "6 crackers"
+    "servingLabel": "6 crackers",
+    "defaultGrams": 30
   },
   {
     "id": "s8",
@@ -1140,7 +1266,8 @@
     "category": "snacks",
     "calories": 110,
     "protein": 3,
-    "servingLabel": "1 small handful"
+    "servingLabel": "1 small handful",
+    "defaultGrams": 30
   },
   {
     "id": "s9",
@@ -1149,7 +1276,8 @@
     "category": "snacks",
     "calories": 60,
     "protein": 1,
-    "servingLabel": "2 squares"
+    "servingLabel": "2 squares",
+    "defaultGrams": 12
   },
   {
     "id": "s10",
@@ -1158,7 +1286,8 @@
     "category": "snacks",
     "calories": 85,
     "protein": 1,
-    "servingLabel": "6 pieces"
+    "servingLabel": "6 pieces",
+    "defaultGrams": 30
   },
   {
     "id": "s11",
@@ -1167,7 +1296,8 @@
     "category": "snacks",
     "calories": 175,
     "protein": 5,
-    "servingLabel": "1/4 cup"
+    "servingLabel": "1/4 cup",
+    "defaultGrams": 35
   },
   {
     "id": "s12",
@@ -1176,7 +1306,8 @@
     "category": "snacks",
     "calories": 150,
     "protein": 5,
-    "servingLabel": "1 serving"
+    "servingLabel": "1 serving",
+    "defaultGrams": 120
   },
   {
     "id": "s13",
@@ -1185,7 +1316,8 @@
     "category": "snacks",
     "calories": 120,
     "protein": 6,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 170
   },
   {
     "id": "s14",
@@ -1194,7 +1326,8 @@
     "category": "snacks",
     "calories": 200,
     "protein": 15,
-    "servingLabel": "1 bar"
+    "servingLabel": "1 bar",
+    "defaultGrams": 50
   },
   {
     "id": "s15",
@@ -1203,7 +1336,8 @@
     "category": "snacks",
     "calories": 150,
     "protein": 2,
-    "servingLabel": "1 small bag"
+    "servingLabel": "1 small bag",
+    "defaultGrams": 28
   },
   {
     "id": "s16",
@@ -1212,7 +1346,8 @@
     "category": "snacks",
     "calories": 140,
     "protein": 2,
-    "servingLabel": "2 cookies"
+    "servingLabel": "2 cookies",
+    "defaultGrams": 30
   },
   {
     "id": "s17",
@@ -1221,7 +1356,8 @@
     "category": "snacks",
     "calories": 165,
     "protein": 6,
-    "servingLabel": "1/4 cup"
+    "servingLabel": "1/4 cup",
+    "defaultGrams": 35
   },
   {
     "id": "s18",
@@ -1230,7 +1366,8 @@
     "category": "snacks",
     "calories": 150,
     "protein": 7,
-    "servingLabel": "1/4 cup"
+    "servingLabel": "1/4 cup",
+    "defaultGrams": 30
   },
   {
     "id": "dr1",
@@ -1239,7 +1376,8 @@
     "category": "drinks",
     "calories": 0,
     "protein": 0,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 250
   },
   {
     "id": "dr2",
@@ -1248,7 +1386,8 @@
     "category": "drinks",
     "calories": 20,
     "protein": 0,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 240
   },
   {
     "id": "dr3",
@@ -1257,7 +1396,8 @@
     "category": "drinks",
     "calories": 10,
     "protein": 0,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 60
   },
   {
     "id": "dr4",
@@ -1266,7 +1406,8 @@
     "category": "drinks",
     "calories": 2,
     "protein": 0,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 240
   },
   {
     "id": "dr5",
@@ -1275,7 +1416,8 @@
     "category": "drinks",
     "calories": 2,
     "protein": 0,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 240
   },
   {
     "id": "dr6",
@@ -1284,7 +1426,8 @@
     "category": "drinks",
     "calories": 2,
     "protein": 0,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 240
   },
   {
     "id": "dr7",
@@ -1293,7 +1436,8 @@
     "category": "drinks",
     "calories": 0,
     "protein": 0,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 250
   },
   {
     "id": "dr8",
@@ -1302,7 +1446,8 @@
     "category": "drinks",
     "calories": 100,
     "protein": 0,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 250
   },
   {
     "id": "dr9",
@@ -1311,7 +1456,8 @@
     "category": "drinks",
     "calories": 60,
     "protein": 1,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 240
   },
   {
     "id": "dr10",
@@ -1320,7 +1466,8 @@
     "category": "drinks",
     "calories": 45,
     "protein": 2,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 240
   },
   {
     "id": "dr11",
@@ -1329,7 +1476,8 @@
     "category": "drinks",
     "calories": 110,
     "protein": 4,
-    "servingLabel": "1 glass"
+    "servingLabel": "1 glass",
+    "defaultGrams": 240
   },
   {
     "id": "dr12",
@@ -1338,6 +1486,7 @@
     "category": "drinks",
     "calories": 15,
     "protein": 0,
-    "servingLabel": "1 cup"
+    "servingLabel": "1 cup",
+    "defaultGrams": 240
   }
 ]
