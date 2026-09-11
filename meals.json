@@ -1,0 +1,228 @@
+[
+  { "id": "meal1", "name": "Chicken Tagine with Preserved Lemon", "emoji": "🍗", "category": "moroccan",
+    "ingredients": [
+      { "name": "Chicken thigh", "emoji": "🍗", "grams": 300, "caloriesAtGrams": 480, "defaultGrams": 300 },
+      { "name": "Potato", "emoji": "🥔", "grams": 200, "caloriesAtGrams": 172, "defaultGrams": 200 },
+      { "name": "Onion", "emoji": "🧅", "grams": 100, "caloriesAtGrams": 40, "defaultGrams": 100 },
+      { "name": "Olives", "emoji": "🫒", "grams": 30, "caloriesAtGrams": 40, "defaultGrams": 30 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 }
+    ] },
+  { "id": "meal2", "name": "Beef Tagine with Prunes", "emoji": "🥩", "category": "moroccan",
+    "ingredients": [
+      { "name": "Beef chunks", "emoji": "🥩", "grams": 250, "caloriesAtGrams": 550, "defaultGrams": 250 },
+      { "name": "Prunes", "emoji": "🌰", "grams": 50, "caloriesAtGrams": 120, "defaultGrams": 50 },
+      { "name": "Onion", "emoji": "🧅", "grams": 100, "caloriesAtGrams": 40, "defaultGrams": 100 },
+      { "name": "Almonds", "emoji": "🌰", "grams": 20, "caloriesAtGrams": 115, "defaultGrams": 20 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 }
+    ] },
+  { "id": "meal3", "name": "Harira Soup", "emoji": "🍲", "category": "moroccan",
+    "ingredients": [
+      { "name": "Beef pieces", "emoji": "🥩", "grams": 100, "caloriesAtGrams": 250, "defaultGrams": 100 },
+      { "name": "Lentils", "emoji": "🫘", "grams": 100, "caloriesAtGrams": 116, "defaultGrams": 100 },
+      { "name": "Chickpeas", "emoji": "🫘", "grams": 80, "caloriesAtGrams": 130, "defaultGrams": 80 },
+      { "name": "Tomato", "emoji": "🍅", "grams": 150, "caloriesAtGrams": 30, "defaultGrams": 150 },
+      { "name": "Vermicelli", "emoji": "🍜", "grams": 50, "caloriesAtGrams": 190, "defaultGrams": 50 },
+      { "name": "Onion", "emoji": "🧅", "grams": 50, "caloriesAtGrams": 20, "defaultGrams": 50 }
+    ] },
+  { "id": "meal4", "name": "Couscous with Seven Vegetables", "emoji": "🍛", "category": "moroccan",
+    "ingredients": [
+      { "name": "Lamb", "emoji": "🍖", "grams": 150, "caloriesAtGrams": 390, "defaultGrams": 150 },
+      { "name": "Couscous", "emoji": "🍛", "grams": 200, "caloriesAtGrams": 220, "defaultGrams": 200 },
+      { "name": "Carrot", "emoji": "🥕", "grams": 100, "caloriesAtGrams": 41, "defaultGrams": 100 },
+      { "name": "Zucchini", "emoji": "🥒", "grams": 100, "caloriesAtGrams": 17, "defaultGrams": 100 },
+      { "name": "Cabbage", "emoji": "🥬", "grams": 100, "caloriesAtGrams": 25, "defaultGrams": 100 },
+      { "name": "Chickpeas", "emoji": "🫘", "grams": 80, "caloriesAtGrams": 130, "defaultGrams": 80 }
+    ] },
+  { "id": "meal5", "name": "Zaalouk (Eggplant Salad)", "emoji": "🍆", "category": "moroccan",
+    "ingredients": [
+      { "name": "Eggplant", "emoji": "🍆", "grams": 200, "caloriesAtGrams": 70, "defaultGrams": 200 },
+      { "name": "Tomato", "emoji": "🍅", "grams": 150, "caloriesAtGrams": 30, "defaultGrams": 150 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 },
+      { "name": "Garlic", "emoji": "🧄", "grams": 10, "caloriesAtGrams": 15, "defaultGrams": 10 }
+    ] },
+  { "id": "meal6", "name": "Msemen with Honey", "emoji": "🫓", "category": "moroccan",
+    "ingredients": [
+      { "name": "Msemen", "emoji": "🫓", "grams": 160, "caloriesAtGrams": 500, "defaultGrams": 160 },
+      { "name": "Honey", "emoji": "🍯", "grams": 30, "caloriesAtGrams": 90, "defaultGrams": 30 },
+      { "name": "Butter", "emoji": "🧈", "grams": 10, "caloriesAtGrams": 72, "defaultGrams": 10 }
+    ] },
+  { "id": "meal7", "name": "Chicken Rfissa", "emoji": "🍗", "category": "moroccan",
+    "ingredients": [
+      { "name": "Chicken", "emoji": "🍗", "grams": 250, "caloriesAtGrams": 400, "defaultGrams": 250 },
+      { "name": "Msemen strips", "emoji": "🫓", "grams": 100, "caloriesAtGrams": 300, "defaultGrams": 100 },
+      { "name": "Lentils", "emoji": "🫘", "grams": 80, "caloriesAtGrams": 92, "defaultGrams": 80 },
+      { "name": "Onion", "emoji": "🧅", "grams": 80, "caloriesAtGrams": 32, "defaultGrams": 80 }
+    ] },
+  { "id": "meal8", "name": "Moroccan Grilled Sardines", "emoji": "🐟", "category": "moroccan",
+    "ingredients": [
+      { "name": "Sardines", "emoji": "🐟", "grams": 200, "caloriesAtGrams": 416, "defaultGrams": 200 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 10, "caloriesAtGrams": 87, "defaultGrams": 10 },
+      { "name": "Lemon", "emoji": "🍋", "grams": 20, "caloriesAtGrams": 3, "defaultGrams": 20 }
+    ] },
+  { "id": "meal9", "name": "Bissara (Fava Bean Soup)", "emoji": "🫘", "category": "moroccan",
+    "ingredients": [
+      { "name": "Fava beans", "emoji": "🫘", "grams": 200, "caloriesAtGrams": 220, "defaultGrams": 200 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 },
+      { "name": "Garlic", "emoji": "🧄", "grams": 10, "caloriesAtGrams": 15, "defaultGrams": 10 }
+    ] },
+  { "id": "meal10", "name": "Kefta Tagine with Eggs", "emoji": "🍖", "category": "moroccan",
+    "ingredients": [
+      { "name": "Ground beef", "emoji": "🥩", "grams": 250, "caloriesAtGrams": 540, "defaultGrams": 250 },
+      { "name": "Tomato", "emoji": "🍅", "grams": 150, "caloriesAtGrams": 30, "defaultGrams": 150 },
+      { "name": "Egg", "emoji": "🥚", "grams": 50, "caloriesAtGrams": 78, "defaultGrams": 50 },
+      { "name": "Onion", "emoji": "🧅", "grams": 80, "caloriesAtGrams": 32, "defaultGrams": 80 }
+    ] },
+  { "id": "meal11", "name": "Pastilla (Chicken)", "emoji": "🥟", "category": "moroccan",
+    "ingredients": [
+      { "name": "Chicken", "emoji": "🍗", "grams": 200, "caloriesAtGrams": 320, "defaultGrams": 200 },
+      { "name": "Filo pastry", "emoji": "🥟", "grams": 80, "caloriesAtGrams": 280, "defaultGrams": 80 },
+      { "name": "Almonds", "emoji": "🌰", "grams": 30, "caloriesAtGrams": 173, "defaultGrams": 30 }
+    ] },
+  { "id": "meal12", "name": "Moroccan Grilled Chicken Skewers", "emoji": "🍢", "category": "moroccan",
+    "ingredients": [
+      { "name": "Chicken breast", "emoji": "🍗", "grams": 300, "caloriesAtGrams": 495, "defaultGrams": 300 },
+      { "name": "Bell pepper", "emoji": "🫑", "grams": 100, "caloriesAtGrams": 30, "defaultGrams": 100 },
+      { "name": "Onion", "emoji": "🧅", "grams": 80, "caloriesAtGrams": 32, "defaultGrams": 80 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 10, "caloriesAtGrams": 87, "defaultGrams": 10 }
+    ] },
+
+  { "id": "meal13", "name": "Spaghetti Bolognese", "emoji": "🍝", "category": "pasta",
+    "ingredients": [
+      { "name": "Spaghetti", "emoji": "🍝", "grams": 200, "caloriesAtGrams": 280, "defaultGrams": 200 },
+      { "name": "Ground beef", "emoji": "🥩", "grams": 150, "caloriesAtGrams": 320, "defaultGrams": 150 },
+      { "name": "Tomato sauce", "emoji": "🍅", "grams": 150, "caloriesAtGrams": 60, "defaultGrams": 150 },
+      { "name": "Parmesan", "emoji": "🧀", "grams": 20, "caloriesAtGrams": 73, "defaultGrams": 20 }
+    ] },
+  { "id": "meal14", "name": "Penne Arrabbiata", "emoji": "🍝", "category": "pasta",
+    "ingredients": [
+      { "name": "Penne", "emoji": "🍝", "grams": 200, "caloriesAtGrams": 280, "defaultGrams": 200 },
+      { "name": "Tomato sauce", "emoji": "🍅", "grams": 200, "caloriesAtGrams": 80, "defaultGrams": 200 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 },
+      { "name": "Garlic", "emoji": "🧄", "grams": 10, "caloriesAtGrams": 15, "defaultGrams": 10 }
+    ] },
+  { "id": "meal15", "name": "Chicken Alfredo Pasta", "emoji": "🍝", "category": "pasta",
+    "ingredients": [
+      { "name": "Fettuccine", "emoji": "🍝", "grams": 200, "caloriesAtGrams": 280, "defaultGrams": 200 },
+      { "name": "Chicken breast", "emoji": "🍗", "grams": 150, "caloriesAtGrams": 248, "defaultGrams": 150 },
+      { "name": "Cream", "emoji": "🥛", "grams": 50, "caloriesAtGrams": 100, "defaultGrams": 50 },
+      { "name": "Parmesan", "emoji": "🧀", "grams": 20, "caloriesAtGrams": 73, "defaultGrams": 20 }
+    ] },
+  { "id": "meal16", "name": "Pasta Primavera", "emoji": "🍝", "category": "pasta",
+    "ingredients": [
+      { "name": "Penne", "emoji": "🍝", "grams": 200, "caloriesAtGrams": 280, "defaultGrams": 200 },
+      { "name": "Mixed vegetables", "emoji": "🥦", "grams": 150, "caloriesAtGrams": 60, "defaultGrams": 150 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 },
+      { "name": "Parmesan", "emoji": "🧀", "grams": 15, "caloriesAtGrams": 55, "defaultGrams": 15 }
+    ] },
+  { "id": "meal17", "name": "Beef Lasagna", "emoji": "🍝", "category": "pasta",
+    "ingredients": [
+      { "name": "Lasagna sheets", "emoji": "🍝", "grams": 150, "caloriesAtGrams": 220, "defaultGrams": 150 },
+      { "name": "Ground beef", "emoji": "🥩", "grams": 150, "caloriesAtGrams": 320, "defaultGrams": 150 },
+      { "name": "Tomato sauce", "emoji": "🍅", "grams": 100, "caloriesAtGrams": 40, "defaultGrams": 100 },
+      { "name": "Mozzarella", "emoji": "🧀", "grams": 50, "caloriesAtGrams": 140, "defaultGrams": 50 }
+    ] },
+  { "id": "meal18", "name": "Shrimp Pasta", "emoji": "🍝", "category": "pasta",
+    "ingredients": [
+      { "name": "Linguine", "emoji": "🍝", "grams": 200, "caloriesAtGrams": 280, "defaultGrams": 200 },
+      { "name": "Shrimp", "emoji": "🍤", "grams": 150, "caloriesAtGrams": 149, "defaultGrams": 150 },
+      { "name": "Garlic", "emoji": "🧄", "grams": 10, "caloriesAtGrams": 15, "defaultGrams": 10 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 }
+    ] },
+  { "id": "meal19", "name": "Pasta with Tuna", "emoji": "🍝", "category": "pasta",
+    "ingredients": [
+      { "name": "Penne", "emoji": "🍝", "grams": 200, "caloriesAtGrams": 280, "defaultGrams": 200 },
+      { "name": "Tuna (canned)", "emoji": "🐟", "grams": 100, "caloriesAtGrams": 116, "defaultGrams": 100 },
+      { "name": "Tomato sauce", "emoji": "🍅", "grams": 100, "caloriesAtGrams": 40, "defaultGrams": 100 },
+      { "name": "Olives", "emoji": "🫒", "grams": 20, "caloriesAtGrams": 27, "defaultGrams": 20 }
+    ] },
+  { "id": "meal20", "name": "Mac and Cheese", "emoji": "🧀", "category": "pasta",
+    "ingredients": [
+      { "name": "Macaroni", "emoji": "🍝", "grams": 200, "caloriesAtGrams": 280, "defaultGrams": 200 },
+      { "name": "Cheddar cheese", "emoji": "🧀", "grams": 60, "caloriesAtGrams": 240, "defaultGrams": 60 },
+      { "name": "Milk", "emoji": "🥛", "grams": 50, "caloriesAtGrams": 30, "defaultGrams": 50 },
+      { "name": "Butter", "emoji": "🧈", "grams": 10, "caloriesAtGrams": 72, "defaultGrams": 10 }
+    ] },
+
+  { "id": "meal21", "name": "Grilled Chicken with Rice and Vegetables", "emoji": "🍚", "category": "popular",
+    "ingredients": [
+      { "name": "Chicken breast", "emoji": "🍗", "grams": 200, "caloriesAtGrams": 330, "defaultGrams": 200 },
+      { "name": "Rice", "emoji": "🍚", "grams": 150, "caloriesAtGrams": 195, "defaultGrams": 150 },
+      { "name": "Broccoli", "emoji": "🥦", "grams": 100, "caloriesAtGrams": 55, "defaultGrams": 100 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 10, "caloriesAtGrams": 87, "defaultGrams": 10 }
+    ] },
+  { "id": "meal22", "name": "Beef Burger with Fries", "emoji": "🍔", "category": "popular",
+    "ingredients": [
+      { "name": "Beef patty", "emoji": "🥩", "grams": 150, "caloriesAtGrams": 320, "defaultGrams": 150 },
+      { "name": "Burger bun", "emoji": "🍞", "grams": 70, "caloriesAtGrams": 190, "defaultGrams": 70 },
+      { "name": "Cheese slice", "emoji": "🧀", "grams": 20, "caloriesAtGrams": 80, "defaultGrams": 20 },
+      { "name": "Fries", "emoji": "🍟", "grams": 100, "caloriesAtGrams": 312, "defaultGrams": 100 }
+    ] },
+  { "id": "meal23", "name": "Chicken Shawarma Plate", "emoji": "🌯", "category": "popular",
+    "ingredients": [
+      { "name": "Chicken", "emoji": "🍗", "grams": 200, "caloriesAtGrams": 330, "defaultGrams": 200 },
+      { "name": "Pita bread", "emoji": "🫓", "grams": 70, "caloriesAtGrams": 190, "defaultGrams": 70 },
+      { "name": "Garlic sauce", "emoji": "🥣", "grams": 30, "caloriesAtGrams": 150, "defaultGrams": 30 },
+      { "name": "Pickles", "emoji": "🥒", "grams": 30, "caloriesAtGrams": 5, "defaultGrams": 30 }
+    ] },
+  { "id": "meal24", "name": "Grilled Salmon with Quinoa", "emoji": "🐟", "category": "popular",
+    "ingredients": [
+      { "name": "Salmon", "emoji": "🐟", "grams": 180, "caloriesAtGrams": 374, "defaultGrams": 180 },
+      { "name": "Quinoa", "emoji": "🍚", "grams": 150, "caloriesAtGrams": 185, "defaultGrams": 150 },
+      { "name": "Asparagus", "emoji": "🥦", "grams": 100, "caloriesAtGrams": 20, "defaultGrams": 100 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 10, "caloriesAtGrams": 87, "defaultGrams": 10 }
+    ] },
+  { "id": "meal25", "name": "Chicken Caesar Salad", "emoji": "🥗", "category": "popular",
+    "ingredients": [
+      { "name": "Chicken breast", "emoji": "🍗", "grams": 150, "caloriesAtGrams": 248, "defaultGrams": 150 },
+      { "name": "Romaine lettuce", "emoji": "🥬", "grams": 100, "caloriesAtGrams": 17, "defaultGrams": 100 },
+      { "name": "Parmesan", "emoji": "🧀", "grams": 20, "caloriesAtGrams": 73, "defaultGrams": 20 },
+      { "name": "Caesar dressing", "emoji": "🥣", "grams": 30, "caloriesAtGrams": 130, "defaultGrams": 30 },
+      { "name": "Croutons", "emoji": "🍞", "grams": 20, "caloriesAtGrams": 87, "defaultGrams": 20 }
+    ] },
+  { "id": "meal26", "name": "Falafel Plate", "emoji": "🧆", "category": "popular",
+    "ingredients": [
+      { "name": "Falafel", "emoji": "🧆", "grams": 150, "caloriesAtGrams": 330, "defaultGrams": 150 },
+      { "name": "Hummus", "emoji": "🥣", "grams": 60, "caloriesAtGrams": 120, "defaultGrams": 60 },
+      { "name": "Pita bread", "emoji": "🫓", "grams": 70, "caloriesAtGrams": 190, "defaultGrams": 70 },
+      { "name": "Salad", "emoji": "🥗", "grams": 80, "caloriesAtGrams": 20, "defaultGrams": 80 }
+    ] },
+  { "id": "meal27", "name": "Beef Steak with Mashed Potatoes", "emoji": "🥩", "category": "popular",
+    "ingredients": [
+      { "name": "Beef steak", "emoji": "🥩", "grams": 200, "caloriesAtGrams": 500, "defaultGrams": 200 },
+      { "name": "Mashed potato", "emoji": "🥔", "grams": 200, "caloriesAtGrams": 214, "defaultGrams": 200 },
+      { "name": "Green beans", "emoji": "🫛", "grams": 80, "caloriesAtGrams": 25, "defaultGrams": 80 }
+    ] },
+  { "id": "meal28", "name": "Chicken Fajitas", "emoji": "🌮", "category": "popular",
+    "ingredients": [
+      { "name": "Chicken breast", "emoji": "🍗", "grams": 200, "caloriesAtGrams": 330, "defaultGrams": 200 },
+      { "name": "Tortillas", "emoji": "🌮", "grams": 100, "caloriesAtGrams": 280, "defaultGrams": 100 },
+      { "name": "Bell pepper", "emoji": "🫑", "grams": 100, "caloriesAtGrams": 30, "defaultGrams": 100 },
+      { "name": "Onion", "emoji": "🧅", "grams": 80, "caloriesAtGrams": 32, "defaultGrams": 80 }
+    ] },
+  { "id": "meal29", "name": "Grilled Kofta Wrap", "emoji": "🌯", "category": "popular",
+    "ingredients": [
+      { "name": "Kofta", "emoji": "🍖", "grams": 150, "caloriesAtGrams": 345, "defaultGrams": 150 },
+      { "name": "Pita bread", "emoji": "🫓", "grams": 70, "caloriesAtGrams": 190, "defaultGrams": 70 },
+      { "name": "Tahini sauce", "emoji": "🥣", "grams": 30, "caloriesAtGrams": 90, "defaultGrams": 30 },
+      { "name": "Salad", "emoji": "🥗", "grams": 60, "caloriesAtGrams": 15, "defaultGrams": 60 }
+    ] },
+  { "id": "meal30", "name": "Vegetable Soup with Bread", "emoji": "🍲", "category": "popular",
+    "ingredients": [
+      { "name": "Vegetable soup", "emoji": "🍲", "grams": 300, "caloriesAtGrams": 140, "defaultGrams": 300 },
+      { "name": "Bread", "emoji": "🍞", "grams": 50, "caloriesAtGrams": 130, "defaultGrams": 50 }
+    ] },
+  { "id": "meal31", "name": "Turkey Sandwich", "emoji": "🥪", "category": "popular",
+    "ingredients": [
+      { "name": "Turkey breast", "emoji": "🍗", "grams": 80, "caloriesAtGrams": 108, "defaultGrams": 80 },
+      { "name": "Bread", "emoji": "🍞", "grams": 60, "caloriesAtGrams": 160, "defaultGrams": 60 },
+      { "name": "Cheese slice", "emoji": "🧀", "grams": 20, "caloriesAtGrams": 80, "defaultGrams": 20 },
+      { "name": "Lettuce & tomato", "emoji": "🥬", "grams": 40, "caloriesAtGrams": 10, "defaultGrams": 40 }
+    ] },
+  { "id": "meal32", "name": "Grilled Fish Tagine", "emoji": "🐟", "category": "popular",
+    "ingredients": [
+      { "name": "White fish", "emoji": "🐟", "grams": 250, "caloriesAtGrams": 260, "defaultGrams": 250 },
+      { "name": "Tomato", "emoji": "🍅", "grams": 150, "caloriesAtGrams": 30, "defaultGrams": 150 },
+      { "name": "Bell pepper", "emoji": "🫑", "grams": 100, "caloriesAtGrams": 30, "defaultGrams": 100 },
+      { "name": "Olive oil", "emoji": "🫙", "grams": 15, "caloriesAtGrams": 130, "defaultGrams": 15 }
+    ] }
+]

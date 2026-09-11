@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Calories" />
+  <meta name="theme-color" content="#FAF7F2" />
+  <title>Calorie Tracker</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- ============ TODAY ============ -->
+    <section id="screen-today" class="screen" data-screen="today">
+      <div class="screen-scroll">
+        <header class="page-header">
+          <div>
+            <h1 class="page-title">Today</h1>
+            <p class="page-date" id="today-date"></p>
+          </div>
+          <div class="target-pill" id="target-pill">Target — kcal</div>
+        </header>
+
+        <div class="ring-wrap">
+          <svg class="ring-svg" viewBox="0 0 400 400">
+            <circle class="ring-track" cx="200" cy="200" r="176"></circle>
+            <circle class="ring-progress" id="ring-progress" cx="200" cy="200" r="176"></circle>
+          </svg>
+          <button type="button" class="ring-center" id="ring-center" aria-label="See today's entries">
+            <span class="ring-remaining" id="ring-remaining">0</span>
+            <span class="ring-label" id="ring-remaining-label">calories left</span>
+            <span class="ring-hint" id="ring-hint">Tap a food, or drag it here</span>
+          </button>
+        </div>
+        <p class="ring-sub" id="ring-sub">0 eaten of 0 kcal</p>
+
+        <div class="meal-selector" id="meal-selector">
+          <button type="button" class="meal-btn" data-meal="breakfast">
+            <span class="meal-btn-icon">🌅</span>
+            <span class="meal-btn-name">Breakfast</span>
+            <span class="meal-btn-sub" data-sub="breakfast">—</span>
+          </button>
+          <button type="button" class="meal-btn" data-meal="lunch">
+            <span class="meal-btn-icon">🌞</span>
+            <span class="meal-btn-name">Lunch</span>
+            <span class="meal-btn-sub" data-sub="lunch">—</span>
+          </button>
+          <button type="button" class="meal-btn" data-meal="dinner">
+            <span class="meal-btn-icon">🌙</span>
+            <span class="meal-btn-name">Dinner</span>
+            <span class="meal-btn-sub" data-sub="dinner">—</span>
+          </button>
+          <button type="button" class="meal-btn" data-meal="snacks">
+            <span class="meal-btn-icon">🍎</span>
+            <span class="meal-btn-name">Snacks</span>
+            <span class="meal-btn-sub" data-sub="snacks">—</span>
+          </button>
+        </div>
+
+        <div class="food-browser">
+          <nav class="side-menu" id="side-menu">
+            <!-- populated by app.js -->
+          </nav>
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2 class="panel-title" id="panel-title">Favourites</h2>
+                <p class="panel-hint" id="panel-hint">adding to breakfast</p>
+              </div>
+            </div>
+            <input type="search" id="search-input" class="search-input" placeholder="Search all foods" />
+            <div class="food-grid" id="food-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HISTORY ============ -->
+    <section id="screen-history" class="screen" data-screen="history" hidden>
+      <div class="screen-scroll">
+        <header class="page-header">
+          <div>
+            <h1 class="page-title">History</h1>
+            <p class="page-date" id="history-month-label"></p>
+          </div>
+        </header>
+
+        <div class="month-grid" id="month-grid"></div>
+
+        <p class="legend">
+          <span class="legend-dot under"></span> Under target
+          <span class="legend-dot over"></span> Over target
+        </p>
+
+        <div class="day-detail" id="day-detail" hidden>
+          <div class="day-detail-head">
+            <h3 class="day-detail-title" id="day-detail-title"></h3>
+            <span class="day-detail-total" id="day-detail-total"></span>
+          </div>
+          <div id="day-detail-rows"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SETTINGS ============ -->
+    <section id="screen-settings" class="screen" data-screen="settings" hidden>
+      <div class="screen-scroll">
+        <header class="page-header">
+          <div>
+            <h1 class="page-title">Settings</h1>
+            <p class="page-date" id="settings-status">Locked — nothing can change by accident</p>
+          </div>
+        </header>
+
+        <button type="button" class="unlock-gate" id="unlock-gate">
+          <span class="unlock-icon">🔒</span>
+          <span class="unlock-title">Unlock to edit</span>
+          <span class="unlock-sub">Tap to change your target or personal stats</span>
+        </button>
+
+        <div class="settings-panels" id="settings-panels">
+          <section class="panel-card">
+            <h3 class="panel-card-title">Daily calorie target</h3>
+            <p class="panel-card-sub" id="target-suggestion-text">Suggested — kcal — from your stats, minus a 500 kcal deficit.</p>
+            <div class="stepper-row">
+              <button type="button" class="stepper-btn" id="target-minus">−</button>
+              <span class="stepper-value" id="target-value">0</span>
+              <button type="button" class="stepper-btn" id="target-plus">+</button>
+            </div>
+          </section>
+
+          <section class="panel-card">
+            <h3 class="panel-card-title">About you</h3>
+            <div class="stats-grid" id="stats-grid"></div>
+          </section>
+
+          <section class="panel-card">
+            <h3 class="panel-card-title">Favourites &amp; custom foods</h3>
+            <div id="favorites-list" class="favorites-list"></div>
+            <button type="button" class="dashed-tile" id="add-food-btn">＋ Add a food</button>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TAB BAR ============ -->
+    <nav class="tab-bar" id="tab-bar">
+      <button type="button" class="tab-btn active" data-tab="today">
+        <span class="tab-icon">🍽️</span>
+        <span class="tab-label">Today</span>
+      </button>
+      <button type="button" class="tab-btn" data-tab="history">
+        <span class="tab-icon">📅</span>
+        <span class="tab-label">History</span>
+      </button>
+      <button type="button" class="tab-btn" data-tab="settings">
+        <span class="tab-icon">⚙️</span>
+        <span class="tab-label">Settings</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- ============ ENTRIES POPUP (ring tap) ============ -->
+  <div class="sheet-overlay" id="entries-overlay" hidden>
+    <div class="sheet" id="entries-sheet">
+      <div class="sheet-head">
+        <div>
+          <h2 class="sheet-title">Today's entries</h2>
+          <p class="sheet-sub" id="entries-sub">0 eaten of 0 kcal</p>
+        </div>
+        <button type="button" class="close-btn" id="entries-close">✕</button>
+      </div>
+      <div class="sheet-body" id="entries-body"></div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL A: meal idea portion editor ============ -->
+  <div class="sheet-overlay" id="meal-modal-overlay" hidden>
+    <div class="sheet" id="meal-modal-sheet">
+      <div class="sheet-head">
+        <div class="sheet-head-with-emoji">
+          <span class="sheet-emoji" id="meal-modal-emoji">🍲</span>
+          <div>
+            <h2 class="sheet-title" id="meal-modal-name">Meal</h2>
+            <p class="sheet-sub">Change any amount to match her portion.</p>
+          </div>
+        </div>
+        <button type="button" class="close-btn" id="meal-modal-close">✕</button>
+      </div>
+      <div class="sheet-body" id="meal-modal-ingredients"></div>
+      <div class="sheet-footer">
+        <div class="sheet-footer-total">
+          <span class="total-label">TOTAL</span>
+          <span class="total-value" id="meal-modal-total">0 kcal</span>
+        </div>
+        <button type="button" class="primary-btn" id="meal-modal-save">Save this meal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL B: add your own food ============ -->
+  <div class="sheet-overlay" id="custom-food-overlay" hidden>
+    <div class="sheet" id="custom-food-sheet">
+      <div class="sheet-head">
+        <h2 class="sheet-title">Add your own food</h2>
+        <button type="button" class="close-btn" id="custom-food-close">✕</button>
+      </div>
+      <div class="sheet-body">
+        <section class="form-section">
+          <label class="form-label">Pick a picture</label>
+          <div class="emoji-picker" id="emoji-picker"></div>
+        </section>
+        <section class="form-section">
+          <label class="form-label" for="custom-food-name">What is it called?</label>
+          <input type="text" id="custom-food-name" class="text-input" placeholder="e.g. Mum's lentil soup" />
+        </section>
+        <section class="form-section">
+          <label class="form-label">How many calories in one serving?</label>
+          <div class="stepper-row">
+            <button type="button" class="stepper-btn" id="custom-cal-minus">−</button>
+            <span class="stepper-value" id="custom-cal-value">100</span>
+            <button type="button" class="stepper-btn" id="custom-cal-plus">+</button>
+          </div>
+        </section>
+        <section class="form-section">
+          <label class="form-label">How much is one serving?</label>
+          <div class="chip-row" id="serving-chip-row"></div>
+        </section>
+      </div>
+      <div class="sheet-footer">
+        <div class="custom-food-preview" id="custom-food-preview">
+          <span class="preview-emoji" id="preview-emoji">🍲</span>
+          <div>
+            <div class="preview-name" id="preview-name">Your food</div>
+            <div class="preview-sub" id="preview-sub">100 kcal · 1 bowl</div>
+          </div>
+        </div>
+        <button type="button" class="primary-btn" id="custom-food-save" disabled>Save food</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
