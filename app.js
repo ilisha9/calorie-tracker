@@ -172,9 +172,31 @@
     renderHistory();
     renderSettings();
 
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js").catch(() => {});
-    }
+    setupServiceWorker();
+  }
+
+  function setupServiceWorker() {
+    if (!("serviceWorker" in navigator)) return;
+
+    // Reload once the new service worker actually takes control, so an
+    // update never sits "installed but waiting" behind a stale page.
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (reloaded) return;
+      reloaded = true;
+      window.location.reload();
+    });
+
+    navigator.serviceWorker.register("service-worker.js").then((reg) => {
+      // iOS standalone apps often resume from a suspended state instead of
+      // doing a fresh navigation, so the browser's own update check can go
+      // stale for a long time. Force a check on load and every time the app
+      // is foregrounded.
+      reg.update().catch(() => {});
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") reg.update().catch(() => {});
+      });
+    }).catch(() => {});
   }
 
   // ---------- tab bar ----------
