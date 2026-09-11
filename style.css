@@ -567,20 +567,41 @@ button {
 }
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-edit-row {
+  background: var(--sunken-3);
+  border-radius: var(--r-20);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
   gap: 12px;
 }
 
-.stat-row {
+.stat-edit-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--muted-2);
+  flex: 1;
+}
+
+.stat-edit-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink-2);
+}
+
+.stat-activity-row {
   background: var(--sunken-3);
   border-radius: var(--r-20);
-  padding: 18px 20px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--muted-2);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.stat-row b { display: block; font-size: 20px; font-weight: 800; color: var(--ink-2); }
 
 .favorites-list {
   display: flex;

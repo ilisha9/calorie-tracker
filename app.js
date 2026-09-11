@@ -963,14 +963,7 @@
       `Suggested ${suggested.toLocaleString()} kcal — from your stats, minus a ${state.settings.deficit} kcal deficit.`;
     document.getElementById("target-value").textContent = state.settings.dailyTarget.toLocaleString();
 
-    const statsGrid = document.getElementById("stats-grid");
-    const activityLabel = { sedentary: "Sedentary", light: "Light", moderate: "Moderate", active: "Active" }[state.settings.activityLevel] || "Light";
-    statsGrid.innerHTML = `
-      <div class="stat-row">Weight<b>${state.settings.weightKg} kg</b></div>
-      <div class="stat-row">Height<b>${state.settings.heightCm} cm</b></div>
-      <div class="stat-row">Age<b>${state.settings.age}</b></div>
-      <div class="stat-row">Activity<b>${activityLabel}</b></div>
-    `;
+    renderStatsGrid();
 
     const favList = document.getElementById("favorites-list");
     favList.innerHTML = "";
@@ -995,6 +988,84 @@
       attachFavoriteReorder(row, idx);
       favList.appendChild(row);
     });
+  }
+
+  const ACTIVITY_LEVELS = [
+    { key: "sedentary", label: "Sedentary" },
+    { key: "light", label: "Light" },
+    { key: "moderate", label: "Moderate" },
+    { key: "active", label: "Active" },
+  ];
+
+  function updateStat(field, value) {
+    state.settings[field] = value;
+    saveJSONLS("settings", state.settings);
+    renderSettings();
+  }
+
+  function statEditRow(label, value, unit, onMinus, onPlus) {
+    const row = document.createElement("div");
+    row.className = "stat-edit-row";
+    row.innerHTML = `
+      <span class="stat-edit-label">${label}</span>
+      <span class="stat-edit-value">${value}${unit ? ` ${unit}` : ""}</span>
+      <span class="steppers">
+        <button type="button" class="mini-stepper-btn" data-act="minus">−</button>
+        <button type="button" class="mini-stepper-btn" data-act="plus">+</button>
+      </span>
+    `;
+    row.querySelector('[data-act="minus"]').addEventListener("click", () => {
+      if (!state.settingsUnlocked) return;
+      onMinus();
+    });
+    row.querySelector('[data-act="plus"]').addEventListener("click", () => {
+      if (!state.settingsUnlocked) return;
+      onPlus();
+    });
+    return row;
+  }
+
+  function renderStatsGrid() {
+    const statsGrid = document.getElementById("stats-grid");
+    statsGrid.innerHTML = "";
+
+    statsGrid.appendChild(statEditRow(
+      "Weight", state.settings.weightKg, "kg",
+      () => updateStat("weightKg", Math.max(30, state.settings.weightKg - 1)),
+      () => updateStat("weightKg", state.settings.weightKg + 1)
+    ));
+    statsGrid.appendChild(statEditRow(
+      "Height", state.settings.heightCm, "cm",
+      () => updateStat("heightCm", Math.max(100, state.settings.heightCm - 1)),
+      () => updateStat("heightCm", state.settings.heightCm + 1)
+    ));
+    statsGrid.appendChild(statEditRow(
+      "Age", state.settings.age, "",
+      () => updateStat("age", Math.max(10, state.settings.age - 1)),
+      () => updateStat("age", state.settings.age + 1)
+    ));
+
+    const activityRow = document.createElement("div");
+    activityRow.className = "stat-activity-row";
+    const activityLabel = document.createElement("span");
+    activityLabel.className = "stat-edit-label";
+    activityLabel.textContent = "Activity";
+    activityRow.appendChild(activityLabel);
+    const chipRow = document.createElement("div");
+    chipRow.className = "chip-row";
+    ACTIVITY_LEVELS.forEach((level) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "chip" + (state.settings.activityLevel === level.key ? " selected" : "");
+      chip.textContent = level.label;
+      chip.addEventListener("click", () => {
+        if (!state.settingsUnlocked) return;
+        updateStat("activityLevel", level.key);
+      });
+      chipRow.appendChild(chip);
+    });
+    activityRow.appendChild(chipRow);
+    statsGrid.appendChild(activityRow);
   }
 
   function attachFavoriteReorder(row, idx) {
