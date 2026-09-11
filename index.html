@@ -40,6 +40,14 @@
         </div>
         <p class="ring-sub" id="ring-sub">0 eaten of 0 kcal</p>
 
+        <div class="protein-bar-wrap">
+          <div class="protein-bar-head">
+            <span class="protein-bar-label">🥩 Protein</span>
+            <span class="protein-bar-value" id="protein-value">0 / 0 g</span>
+          </div>
+          <div class="protein-track"><div class="protein-fill" id="protein-fill"></div></div>
+        </div>
+
         <div class="meal-selector" id="meal-selector">
           <button type="button" class="meal-btn" data-meal="breakfast">
             <span class="meal-btn-icon">🌅</span>
@@ -136,6 +144,16 @@
           </section>
 
           <section class="panel-card">
+            <h3 class="panel-card-title">Daily protein target</h3>
+            <p class="panel-card-sub" id="protein-target-suggestion-text">Suggested — g — about 1.6g per kg of body weight.</p>
+            <div class="stepper-row">
+              <button type="button" class="stepper-btn" id="protein-target-minus">−</button>
+              <span class="stepper-value" id="protein-target-value">0</span>
+              <button type="button" class="stepper-btn" id="protein-target-plus">+</button>
+            </div>
+          </section>
+
+          <section class="panel-card">
             <h3 class="panel-card-title">About you</h3>
             <div class="stats-grid" id="stats-grid"></div>
           </section>
@@ -199,6 +217,7 @@
         <div class="sheet-footer-total">
           <span class="total-label">TOTAL</span>
           <span class="total-value" id="meal-modal-total">0 kcal</span>
+          <span class="total-protein" id="meal-modal-protein-total">0g protein</span>
         </div>
         <button type="button" class="primary-btn" id="meal-modal-save">Save this meal</button>
       </div>
@@ -227,6 +246,14 @@
             <button type="button" class="stepper-btn" id="custom-cal-minus">−</button>
             <span class="stepper-value" id="custom-cal-value">100</span>
             <button type="button" class="stepper-btn" id="custom-cal-plus">+</button>
+          </div>
+        </section>
+        <section class="form-section">
+          <label class="form-label">How much protein, in grams?</label>
+          <div class="stepper-row">
+            <button type="button" class="stepper-btn" id="custom-protein-minus">−</button>
+            <span class="stepper-value" id="custom-protein-value">0</span>
+            <button type="button" class="stepper-btn" id="custom-protein-plus">+</button>
           </div>
         </section>
         <section class="form-section">

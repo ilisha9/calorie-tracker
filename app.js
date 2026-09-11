@@ -46,7 +46,7 @@
     settingsUnlocked: false,
     openMealId: null,
     mealModalGrams: {},
-    customDraft: { emoji: EMOJI_CHOICES[0], name: "", calories: 100, serving: SERVING_CHOICES[0] },
+    customDraft: { emoji: EMOJI_CHOICES[0], name: "", calories: 100, protein: 0, serving: SERVING_CHOICES[0] },
   };
 
   // ---------- storage helpers ----------
@@ -110,11 +110,19 @@
     return Math.max(1000, Math.round(target / 50) * 50);
   }
 
+  function computeSuggestedProtein(settings) {
+    return Math.max(0, Math.round((settings.weightKg * 1.6) / 5) * 5);
+  }
+
   function defaultSettings() {
     // Placeholder stats — set her real weight/height/age once via Settings after install.
     // Real values are stored only in this device's localStorage, never in the app source.
     const base = { weightKg: 70, heightCm: 165, age: 40, activityLevel: "light", deficit: 500 };
-    return { ...base, dailyTarget: computeSuggestedTarget(base) };
+    return {
+      ...base,
+      dailyTarget: computeSuggestedTarget(base),
+      proteinTarget: computeSuggestedProtein(base),
+    };
   }
 
   // ---------- init ----------
@@ -127,6 +135,10 @@
     state.customFoods = loadJSONLS("customFoods", []);
     state.favorites = loadJSONLS("favorites", state.foods.slice(0, 6).map((f) => f.id));
     state.settings = loadJSONLS("settings", defaultSettings());
+    if (state.settings.proteinTarget === undefined) {
+      state.settings.proteinTarget = computeSuggestedProtein(state.settings);
+      saveJSONLS("settings", state.settings);
+    }
 
     state.todayKey = todayKeyNow();
     const now = new Date();
@@ -205,6 +217,10 @@
     return getTodayLog().reduce((sum, e) => sum + e.calories, 0);
   }
 
+  function todayProtein() {
+    return getTodayLog().reduce((sum, e) => sum + (e.protein || 0), 0);
+  }
+
   function renderRing() {
     const eaten = todayEaten();
     const target = state.settings.dailyTarget;
@@ -221,6 +237,12 @@
     remainingEl.classList.toggle("over", over);
     document.getElementById("ring-remaining-label").textContent = "calories left";
     document.getElementById("ring-sub").textContent = `${eaten.toLocaleString()} eaten of ${target.toLocaleString()} kcal`;
+
+    const proteinEaten = todayProtein();
+    const proteinTarget = Math.max(1, state.settings.proteinTarget);
+    const proteinFrac = Math.min(1, proteinEaten / proteinTarget);
+    document.getElementById("protein-value").textContent = `${proteinEaten.toLocaleString()} / ${state.settings.proteinTarget.toLocaleString()} g`;
+    document.getElementById("protein-fill").style.width = `${proteinFrac * 100}%`;
   }
 
   function renderMealSelector() {
@@ -406,6 +428,7 @@
       name: food.name,
       emoji: food.emoji,
       calories: food.calories,
+      protein: food.protein || 0,
       servingLabel: food.servingLabel,
       time: new Date().toTimeString().slice(0, 5),
       meal,
@@ -550,7 +573,8 @@
   function renderEntriesPopup() {
     const log = getTodayLog();
     const eaten = log.reduce((s, e) => s + e.calories, 0);
-    document.getElementById("entries-sub").textContent = `${eaten.toLocaleString()} eaten of ${state.settings.dailyTarget.toLocaleString()} kcal`;
+    const protein = log.reduce((s, e) => s + (e.protein || 0), 0);
+    document.getElementById("entries-sub").textContent = `${eaten.toLocaleString()} eaten of ${state.settings.dailyTarget.toLocaleString()} kcal · ${protein}g protein`;
 
     const body = document.getElementById("entries-body");
     body.innerHTML = "";
@@ -576,7 +600,10 @@
             <span class="name">${escapeHtml(entry.name)}</span><br/>
             <span class="meta">${escapeHtml(entry.servingLabel || "")} · ${entry.time}</span>
           </span>
-          <span class="cal">${entry.calories} kcal</span>
+          <span class="cal-protein">
+            <span class="cal">${entry.calories} kcal</span>
+            <span class="protein-mini">${entry.protein || 0}g protein</span>
+          </span>
         `;
         const undoBtn = document.createElement("button");
         undoBtn.type = "button";
@@ -633,11 +660,14 @@
     const container = document.getElementById("meal-modal-ingredients");
     container.innerHTML = "";
     let total = 0;
+    let totalProtein = 0;
 
     meal.ingredients.forEach((ing, idx) => {
       const grams = state.mealModalGrams[idx];
       const kcal = Math.round((ing.caloriesAtGrams * grams) / ing.defaultGrams);
+      const protein = Math.round((ing.proteinAtGrams * grams) / ing.defaultGrams);
       total += kcal;
+      totalProtein += protein;
 
       const row = document.createElement("div");
       row.className = "ingredient-row";
@@ -645,7 +675,7 @@
         <span class="emoji">${ing.emoji}</span>
         <span class="info">
           <span class="name">${escapeHtml(ing.name)}</span><br/>
-          <span class="qty">${grams} g · ${kcal} kcal</span>
+          <span class="qty">${grams} g · ${kcal} kcal · ${protein}g protein</span>
         </span>
         <span class="steppers">
           <button type="button" class="mini-stepper-btn" data-act="minus">−</button>
@@ -665,15 +695,18 @@
     });
 
     document.getElementById("meal-modal-total").textContent = `${total} kcal`;
+    document.getElementById("meal-modal-protein-total").textContent = `${totalProtein}g protein`;
   }
 
   function saveMealAsCustomFood() {
     const meal = state.meals.find((m) => m.id === state.openMealId);
     if (!meal) return;
     let total = 0;
+    let totalProtein = 0;
     meal.ingredients.forEach((ing, idx) => {
       const grams = state.mealModalGrams[idx];
       total += Math.round((ing.caloriesAtGrams * grams) / ing.defaultGrams);
+      totalProtein += Math.round((ing.proteinAtGrams * grams) / ing.defaultGrams);
     });
 
     const custom = {
@@ -682,6 +715,7 @@
       emoji: meal.emoji,
       category: "myMeals",
       calories: total,
+      protein: totalProtein,
       servingLabel: "your portion",
     };
     state.customFoods.push(custom);
@@ -743,11 +777,20 @@
       renderCustomFoodModal();
     });
 
+    document.getElementById("custom-protein-minus").addEventListener("click", () => {
+      state.customDraft.protein = Math.max(0, state.customDraft.protein - 1);
+      renderCustomFoodModal();
+    });
+    document.getElementById("custom-protein-plus").addEventListener("click", () => {
+      state.customDraft.protein += 1;
+      renderCustomFoodModal();
+    });
+
     document.getElementById("custom-food-save").addEventListener("click", saveCustomFood);
   }
 
   function openCustomFoodModal() {
-    state.customDraft = { emoji: EMOJI_CHOICES[0], name: "", calories: 100, serving: SERVING_CHOICES[0] };
+    state.customDraft = { emoji: EMOJI_CHOICES[0], name: "", calories: 100, protein: 0, serving: SERVING_CHOICES[0] };
     document.getElementById("custom-food-name").value = "";
     renderCustomFoodModal();
     document.getElementById("custom-food-overlay").hidden = false;
@@ -765,10 +808,11 @@
       el.classList.toggle("selected", el.textContent === state.customDraft.serving);
     });
     document.getElementById("custom-cal-value").textContent = state.customDraft.calories;
+    document.getElementById("custom-protein-value").textContent = state.customDraft.protein;
 
     document.getElementById("preview-emoji").textContent = state.customDraft.emoji;
     document.getElementById("preview-name").textContent = state.customDraft.name.trim() || "Your food";
-    document.getElementById("preview-sub").textContent = `${state.customDraft.calories} kcal · ${state.customDraft.serving}`;
+    document.getElementById("preview-sub").textContent = `${state.customDraft.calories} kcal · ${state.customDraft.protein}g protein · ${state.customDraft.serving}`;
 
     document.getElementById("custom-food-save").disabled = state.customDraft.name.trim().length === 0;
   }
@@ -781,6 +825,7 @@
       emoji: state.customDraft.emoji,
       category: "myMeals",
       calories: state.customDraft.calories,
+      protein: state.customDraft.protein,
       servingLabel: state.customDraft.serving,
     };
     state.customFoods.push(custom);
@@ -898,12 +943,13 @@
     const panel = document.getElementById("day-detail");
     const entries = getLog(key);
     const total = entries.reduce((s, e) => s + e.calories, 0);
+    const totalProtein = entries.reduce((s, e) => s + (e.protein || 0), 0);
 
     const d = new Date(`${key}T00:00:00`);
     document.getElementById("day-detail-title").textContent = d.toLocaleDateString(undefined, {
       weekday: "long", day: "numeric", month: "long",
     });
-    document.getElementById("day-detail-total").textContent = `${total.toLocaleString()} kcal`;
+    document.getElementById("day-detail-total").textContent = `${total.toLocaleString()} kcal · ${totalProtein}g protein`;
 
     const rows = document.getElementById("day-detail-rows");
     rows.innerHTML = "";
@@ -913,7 +959,7 @@
       entries.forEach((e) => {
         const row = document.createElement("div");
         row.className = "day-row";
-        row.innerHTML = `<span class="emoji">${e.emoji}</span><span class="name">${escapeHtml(e.name)}</span><span class="cal">${e.calories} kcal</span>`;
+        row.innerHTML = `<span class="emoji">${e.emoji}</span><span class="name">${escapeHtml(e.name)}</span><span class="cal">${e.calories} kcal · ${e.protein || 0}g protein</span>`;
         rows.appendChild(row);
       });
     }
@@ -943,6 +989,21 @@
       renderToday();
     });
 
+    document.getElementById("protein-target-minus").addEventListener("click", () => {
+      if (!state.settingsUnlocked) return;
+      state.settings.proteinTarget = Math.max(0, state.settings.proteinTarget - 5);
+      saveJSONLS("settings", state.settings);
+      renderSettings();
+      renderToday();
+    });
+    document.getElementById("protein-target-plus").addEventListener("click", () => {
+      if (!state.settingsUnlocked) return;
+      state.settings.proteinTarget += 5;
+      saveJSONLS("settings", state.settings);
+      renderSettings();
+      renderToday();
+    });
+
     document.getElementById("add-food-btn").addEventListener("click", () => {
       if (!state.settingsUnlocked) return;
       openCustomFoodModal();
@@ -962,6 +1023,11 @@
     document.getElementById("target-suggestion-text").textContent =
       `Suggested ${suggested.toLocaleString()} kcal — from your stats, minus a ${state.settings.deficit} kcal deficit.`;
     document.getElementById("target-value").textContent = state.settings.dailyTarget.toLocaleString();
+
+    const suggestedProtein = computeSuggestedProtein(state.settings);
+    document.getElementById("protein-target-suggestion-text").textContent =
+      `Suggested ${suggestedProtein.toLocaleString()} g — about 1.6g per kg of body weight.`;
+    document.getElementById("protein-target-value").textContent = state.settings.proteinTarget.toLocaleString();
 
     renderStatsGrid();
 
