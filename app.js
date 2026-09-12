@@ -131,7 +131,7 @@
   // ---------- init ----------
 
   async function init() {
-    const [foodsRes, mealsRes] = await Promise.all([fetch("foods.json"), fetch("meals.json")]);
+    const [foodsRes, mealsRes] = await Promise.all([fetch("foods.json?v=4"), fetch("meals.json?v=4")]);
     state.foods = await foodsRes.json();
     state.meals = await mealsRes.json();
 
